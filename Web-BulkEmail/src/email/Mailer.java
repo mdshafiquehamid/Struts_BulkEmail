@@ -26,10 +26,10 @@ public class Mailer extends ActionSupport {
 //		Functionality to extract the recipient list from the HTML form
 	    String[] recipients = to.split(";");
 	    for(int i = 0; i < recipients.length; i++) {
-			
+			int j = 0;
 			if(isValid(recipients[i])) {
 				System.out.println(recipients[i] + " " +"valid");
-				recipients_confirm.add(recipients[i]);
+				recipients_confirm.add(recipients[j]);
 			}
 	    }				
 		MailSender mailSender = new MailSender();
@@ -43,7 +43,7 @@ public class Mailer extends ActionSupport {
 			this.msg = "Email not sent";
 		}
 		
-		return "SEND";
+		return "SENDS";
 					
 	}
 

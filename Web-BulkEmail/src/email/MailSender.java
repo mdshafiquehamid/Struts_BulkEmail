@@ -80,7 +80,7 @@ public class MailSender {
 		msg.setSubject(subject);
 	
 		//setting message mime type to text/plain
-		msg.setContent(message, "text/plain");
+		msg.setContent(messages, "text/plain");
 		Transport.send(msg);
 		
 		this.message = "Email successfully sent";
